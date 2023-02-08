@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
-    <script defer src="/bundle.js"></script>
+    <script defer src="./bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -19,14 +19,16 @@
 </head>
 <body>
     <div class="whole">
-        <div class="logo">
-            <span class="tsk">TASK</span><span class="man">Manager</span>
-        </div>
-        <div class="anim">
-            <div class="box">
-                <span class="sp"></span>
+        <nav>
+            <div class="logo">
+                <span class="tsk">TASK</span><span class="man">Manager</span>
             </div>
-        </div>
+            <div class="anim">
+                <div class="box">
+                    <span class="sp"></span>
+                </div>
+            </div>
+        </nav>
         <div class="content">
             <div class="search">
                 <input type="text" placeholder="Enter new task here" class="enter">
@@ -38,13 +40,16 @@
             <div class="suc non">Task Removed Successfully</div>
             <div class="inside">
                 <div class="tasks">
+                    
                 </div>
             </div>
         </div>
         <div class="amend non">
         </div>
     </div>
-    <div class="overlay none">
+    <div class="overlayCont none">
+        <div class="overlay">
+        </div>
     </div>
 </body>
 </html>
