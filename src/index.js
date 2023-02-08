@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth';
+import {getFirestore} from 'firebase/firestore';
 'use script';
 
 const enter = document.querySelector('.enter')
@@ -24,6 +26,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore();
+let user = ""
 
 // let dataValue = 0;
 // let dataValue2 = 0;
@@ -147,6 +152,7 @@ let dataValue = 0;
 let allTasks = [];
 let editedTask = 0
 let taskCont = ""
+
 if(allTasks.length === 0){
     tasks.innerHTML = `<div class="appear">Tasks Appear Here</div>`
 }

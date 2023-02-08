@@ -127,7 +127,6 @@ nav{
     border-radius: 5px;
     color: #000000;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
     box-shadow: 1px 1px 2px 2px #838383;
 }
 .adds{
@@ -384,6 +383,52 @@ nav{
     margin-right: auto;
     text-align: center;
     color: white;
+}
+.login{
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: red;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.btn{
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-login{
+    background-color: var(--color-one);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.btn-signup{
+    color: var(--color-one);
+    border-bottom: 1px solid var(--color-one);
+    position: relative;
+    transition: all .8s;
+    
+}
+/* .btn-signup::before{
+    transition: all .8s;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-one);
+} */
+.btn-signup:hover{
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-one);
+    color: black;
 }
 @media (max-width: 912px){
     .but{
