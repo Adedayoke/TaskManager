@@ -7,11 +7,20 @@
     --color-one : #fabb18;
     --color-two : #000000;
     --colot-three : #838383;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+html{
+    font-size: 62.5%;
 }
 body{
     background-size: cover;
     height: 100vh;
     user-select: none;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 .whole{
     height: 30%;
@@ -29,7 +38,7 @@ nav{
     width: 100%;
     top: 0;
     box-shadow: 0px 0px 20px -10px var(--color-one);
-    height: 80px;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,6 +46,20 @@ nav{
     position: fixed;
     z-index: 100;
     background-color: #838383;
+}
+.btns2{
+    position: absolute;
+    top: 8rem;
+    right: 1rem;
+    box-shadow: var(--box-shadow);
+    display: none;
+    padding: 1rem;
+    transition: all .8s;
+    background-color: white;
+}
+.hamTrans{
+    opacity: 0;
+    transform: translateY(-1.5rem);
 }
 .content{
     margin-top: 100px;
@@ -51,8 +74,8 @@ nav{
     /* background-color: red; */
 }
 
-.eachTask{
-    height:80px;
+/* .eachTask{
+    height:8rem;
     width: 80%;
     padding: 10px 40px;
     position: relative;
@@ -63,10 +86,26 @@ nav{
     box-shadow: 0px 0px 5px 4px var(--colot-three);
     border-radius: 5px;
     text-transform: capitalize;
-}
-.eachTask:nth-child(even){
+} */
+/* .eachTask:nth-child(even){
     color: var(--color-two);
     background-color: white;
+} */
+.eachTask{
+    text-transform: capitalize;
+    width: 80%;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    margin: 1.2rem auto 0 auto;
+}
+.times{
+}
+.times img{
+    width: 5rem;
+    height: 5rem;
 }
 .extra{
     color: var(--color-one);
@@ -113,6 +152,9 @@ nav{
     outline: none;
     background-color: #f5f5f5;
     box-shadow: 1px 1px 10px -1px #838383;
+}
+.enter::placeholder{
+    text-align: center;
 }
 .add{
     cursor: pointer;
@@ -212,15 +254,15 @@ nav{
         left: 50px;
     }
 }
-.times{
+/* .times{
     position: absolute;
     top: 12px;
     right: 45px;
-}
-.times img{
+} */
+/* .times img{
     height: 40px;
     width: 40px;
-}
+} */
 .bin{
     filter: saturate(0%);
 }
@@ -244,7 +286,7 @@ nav{
     color: var(--colot-three);
 }
 .first1{
-    font-size: 27px;
+    font-size: 2.7rem;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 5px;
     text-transform: capitalize;
@@ -295,7 +337,7 @@ nav{
     align-items: center;
     justify-content: center;
     z-index: 120;
-} 
+}
 .del{
     width: 100%;
     height: 20%;
@@ -384,18 +426,20 @@ nav{
     text-align: center;
     color: white;
 }
-.login{
+.Login{
     height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: red;
+    margin-top: 50px;
+    background-color: white;
 }
 .btns{
     display: flex;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    
 }
 .btn{
     padding: 10px;
@@ -406,6 +450,10 @@ nav{
     background-color: var(--color-one);
     border-radius: 5px;
     margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .btn-signup{
     color: var(--color-one);
@@ -430,6 +478,154 @@ nav{
     background-color: var(--color-one);
     color: black;
 }
+
+
+@keyframes slide-up {
+    0% {
+      transform: translateY(-5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-down {
+    0% {
+      transform: translateY(5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.auth {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    width: 35rem;
+    padding: 1.5rem;
+    animation: slide-up 0.5s ease;
+}
+h2 {
+    color: var(--color-danger);
+    text-align: center;
+}
+/* form {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 1rem;
+      margin: 1rem auto;
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 3px;
+      outline: none;
+    }
+} */
+.card {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+form input{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    border: 1px solid #777;
+    border-radius: 3px;
+    outline: none;
+}
+p {
+  text-align: center;
+  margin: 1rem;
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+.img {
+    animation: slide-down 0.5s ease;
+}
+
+.--btn-primary {
+    color: #fff;
+    background: #007bff;
+}
+.--btn-block {
+    width: 100%;
+}
+
+.--btn {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 6px 8px;
+    margin: 0 5px 0 0;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+.btn-logout{
+    background-color: var(--color-one);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.name{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    margin-right: 1rem;
+}
+.userName{
+    color: var(--color-one);
+    font-weight: 600;
+}
+.only-login, .only-signup{
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.only:hover{
+    color: blue;
+    text-decoration: underline;
+}
+.or{
+    font-size: 1.6rem;
+}
+.error{
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.transformer{
+    transform: translateX(-5rem);
+    opacity: 0;
+}
+.rotate{
+    transform: rotate(90deg);
+}
 @media (max-width: 912px){
     .but{
         width: 60%;
@@ -441,6 +637,7 @@ nav{
         width: 60%;
     }
 }
+
 @media (max-width: 768px){
     .search{
         display: block;
@@ -467,6 +664,46 @@ nav{
     }
 }
 
+@media (max-width: 716px){
+    .eachTask{
+        width: 90%;
+        
+    }
+    .first1{
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .first2{
+        font-size: 1.3rem;
+    }
+    .times img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .img {
+      display: none;
+    }
+}
+@media (max-width: 700px) {
+    .ham{
+        display: block;
+    }
+    .btns2{
+        display: block;
+        z-index: 150;
+    }
+    .btns2 > *{
+        margin-top: .8rem;
+    }
+    .name{
+        color: black;
+    }
+    .btns{
+        display: none;
+    }
+  }
 @media (max-width: 480px){
     .eachTask{
         padding: 10px 30px;
@@ -476,25 +713,13 @@ nav{
         padding: 10px;
         
     }
-    .first2{
-        font-size: 13px;
-    }
-    .first1{
-        font-size: 18px;
-        font-family: 'Oswald', sans-serif;
-        letter-spacing: 5px;
-    }
     .eachTask{
         height: 50px;
+        width: 100%;
     }
     .times img{
         height: 25px;
         width: 25px;
-    }
-    .times{
-        position: absolute;
-        top: 12px;
-        right: 20px;
     }
     .tasks{
         padding: 25px;

@@ -24,15 +24,21 @@
                 <span class="tsk">TASK</span><span class="man">Manager</span>
             </div>
             <div class="btns">
-                <div class="btn btn-login">Login</div>
-                <div class="btn btn-signup">Sign Up</div>
+                <div class="name none">Hi, <span class="userName"></span></div>
+                <div class="btn btn-login only-login">Login</div>
+                <div class="btn btn-signup only-signup">Sign Up</div>
+                <div class="btn btn-logout none">Logout</div>
             </div>
-            <div class="anim none">
-                <div class="box">
-                    <span class="sp"></span>
-                </div>
+            <div class="ham none">
+                <img src="./Hamburger Menu.svg" alt="">
             </div>
         </nav>
+        <div class="btns2 hamTrans">
+            <div class="name none">Hi, <span class="userName"></span></div>
+            <div class="btn btn-login only-login">Login</div>
+            <div class="btn btn-signup only-signup">Sign Up</div>
+            <div class="btn btn-logout none">Logout</div>
+        </div>
         <div class="content">
             <div class="search">
                 <input type="text" placeholder="Enter new task here" class="enter">
@@ -55,9 +61,55 @@
         <div class="overlay">
         </div>
     </div>
-    <div class="loginCont">
-        <div class="Login">
+    <div class="loginCont none">
+        <div id="login" class="Login">
+            <div class='container auth' >
+                <div class='img'>
+                  <img src="./loginImg.jpg" width="400px" alt="Login" />
+                </div>
+                <div class="card">
+                <div class='form'>
+                  <h2 >Login</h2>
+                  <form class="loginForm">
+                    <input placeholder='Email' type="text" required/>
+                    <input placeholder='Password' type="password" required/>
+                    <button class='--btn --btn-primary --btn-block'>Login</button>
+                    <p class="error transformer">User Does Not Exist</p>
+                  </form>
+                  <span class='register'>
+                    <p>Don't have an account?</p>
+                    <span class="only only-signup">
+                    Register</span>
+                    </span>
+                </div>
+                </div>
+                  
+              </div>
+        </div>
+    </div>
 
+    <div class="signupCont none">
+        <div id="login" class="Login">
+            <div class='container auth' >
+                <div class='img'>
+                  <img src="./signupImg.jpg" width="400px" alt="Login" />
+                </div>
+                <div class="card">
+                <div class='form'>
+                  <h2 >Sign Up</h2>
+                  <form class="signupForm">
+                    <input placeholder='Email' type="text" required/>
+                    <input placeholder='Password' type="password" required/>
+                    <button class='--btn --btn-primary --btn-block'>Sign Up</button>
+                    <p class="error transformer">An error occured</p>
+                  </form>
+                  <span class='register'>
+                    <p>Aready have an account? &nbsp; <span class="only only-login">Login</span></p>
+                    </span>
+                </div>
+                </div>
+                  
+              </div>
         </div>
     </div>
 </body>
